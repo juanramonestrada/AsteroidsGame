@@ -98,6 +98,8 @@ public class Asteroids extends Applet implements Runnable, KeyListener {
     }
 
     private void drawAsteroids() {
+        // cambios hecho s por mi en el juego
+        // probando github para la extencion de mi trabajo y casa
 
     }
 
@@ -119,9 +121,7 @@ public class Asteroids extends Applet implements Runnable, KeyListener {
     public void keyTyped(KeyEvent keyEvent) {
 
     }
-
-    // este cambio es necesario
-    // prueva de github
+    
     @Override
     public void keyPressed(KeyEvent keyEvent) {
 
