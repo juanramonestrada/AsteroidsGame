@@ -73,19 +73,29 @@ public class Asteroids extends Applet implements Runnable, KeyListener {
 
     }
 
+    // applet update event to redraw the screen
     public void update(Graphics g){
+        //start off transforms at identity
+        g2d.setTransform(identity);
+
+        //erase the background
+        g2d.setPaint(Color.BLACK);
+        g2d.fillRect(0,0, getSize().width, getSize().height);
+
+        //print some status information
+        g2d.setColor(Color.WHITE);
+        g2d.drawString("Ship: " + Math.round(ship.getPosX())+ ","+
+        Math.round(ship.getPosY()), 5, 10);
+        g2d.drawString("Move angle: " + Math.round(ship.getMoveAngle()) + 90, 5, 25);
+        g2d.drawString("Face angle: " + Math.round(ship.getFaceAngle()), 5, 40);
+
 
     }
-
-
-
-
-
 
     // aqui necesitamos iniciar el applet
     @Override
     public void run() {
-        int i = 23;
+        // se ocupan los objetos de el thread
     }
 
     @Override
@@ -93,6 +103,8 @@ public class Asteroids extends Applet implements Runnable, KeyListener {
 
     }
 
+    // este cambio es necesario
+    // prueva de github
     @Override
     public void keyPressed(KeyEvent keyEvent) {
 
