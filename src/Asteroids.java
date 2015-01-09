@@ -8,10 +8,11 @@ import java.util.Random;
 
 /**
  * Created by juan on 9/12/14.
+ * modificado por Juan Ramon
  */
 public class Asteroids extends Applet implements Runnable, KeyListener {
     //main game thread loop
-    private Thread gameLoop;
+    //private Thread gameLoop;
 
     //double buffer
     private BufferedImage backBuffered;
@@ -20,7 +21,7 @@ public class Asteroids extends Applet implements Runnable, KeyListener {
     private Graphics2D g2d;
 
     // show the box bound box
-    boolean showBounds = false;
+    //boolean showBounds = false;
 
     // asteroid array
     int ASTEROIDS = 20;
@@ -63,7 +64,7 @@ public class Asteroids extends Applet implements Runnable, KeyListener {
             ast[n].setPosX((double)rand.nextInt(600)+20);
             ast[n].setPosY((double)rand.nextInt(440)+20);
             ast[n].setMoveAngle((double)rand.nextInt(360));
-            double ang = ast[n].getMoveAngle()-90;
+            //double ang = ast[n].getMoveAngle()-90;
             //ast[n].setVelX(calcAngleMoveX(ang));
             //ast[n].setVelY(calcAngleMoveY(ang));
         }
@@ -84,11 +85,27 @@ public class Asteroids extends Applet implements Runnable, KeyListener {
 
         //print some status information
         g2d.setColor(Color.WHITE);
-        g2d.drawString("Ship: " + Math.round(ship.getPosX())+ ","+
-        Math.round(ship.getPosY()), 5, 10);
+        g2d.drawString("Ship: " + Math.round(ship.getPosX()) + "," +
+                Math.round(ship.getPosY()), 5, 10);
         g2d.drawString("Move angle: " + Math.round(ship.getMoveAngle()) + 90, 5, 25);
         g2d.drawString("Face angle: " + Math.round(ship.getFaceAngle()), 5, 40);
 
+        //draw the game graphics
+        drawShip();
+        drawBullets();
+        drawAsteroids();
+
+    }
+
+    private void drawAsteroids() {
+
+    }
+
+    private void drawBullets() {
+
+    }
+
+    private void drawShip() {
 
     }
 
