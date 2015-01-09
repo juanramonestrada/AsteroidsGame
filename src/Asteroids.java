@@ -82,10 +82,10 @@ public class Asteroids extends Applet implements Runnable, KeyListener {
 
 
 
-
+    // aqui necesitamos iniciar el applet
     @Override
     public void run() {
-
+        int i = 23;
     }
 
     @Override
