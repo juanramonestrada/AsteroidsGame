@@ -108,7 +108,8 @@ public class Asteroids extends Applet implements Runnable, KeyListener {
     }
 
     private void drawShip() {
-
+        // set up the draw ship
+        Ship ship = new Ship();
     }
 
     // aqui necesitamos iniciar el applet
@@ -121,7 +122,7 @@ public class Asteroids extends Applet implements Runnable, KeyListener {
     public void keyTyped(KeyEvent keyEvent) {
 
     }
-    
+
     @Override
     public void keyPressed(KeyEvent keyEvent) {
 
